@@ -1,0 +1,23 @@
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    background-color: aqua;
+    .main-h1{
+        color:red;
+        align-items: flex-start;
+    }
+    .main-bar{
+        align-items: flex-end;
+        flex-direction: row;
+        .main-bar-input{
+            color:red;
+            align-items: flex-start;
+            input{
+                width: 208px;;
+            }
+            
+        }   
+    }
+}
