@@ -1,23 +1,73 @@
+$lavenderBlush:#f3e8ee;
+$lauralGreen: #bacdb0;
+$russianGreen: #729b79;
+$deepSpaceSparkle: #475b63;
+$reisinBlack: #2e2c1f;
+
+body {
+    background-color: $lauralGreen;
+}
 .main{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items:center;
-    background-color: aqua;
+    align-items: center;
+    background-color:$lauralGreen;
     .main-h1{
-        color:red;
-        align-items: flex-start;
+        display: flex;
+        background-color: rgb(46, 44, 47);
+        font-family: "Alegreya Sans", sans-serif;
+        width: 100%;
+        border-radius: 5px;
+        h1{
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: $lavenderBlush;
+            margin-left: 43%;
+            font-size: 50px;
+        }
     }
     .main-bar{
+        margin-top: 20px;
         align-items: flex-end;
         flex-direction: row;
         .main-bar-input{
-            color:red;
             align-items: flex-start;
             input{
-                width: 208px;;
+                width: 302px;
+                height: 100px;
+                font-size: 40px;
+                background-color: $lavenderBlush;
+                color: $deepSpaceSparkle;
+                opacity: 0.75;
+                text-align: center;
+                border-radius: 0px 5px 5px;
             }
-            
-        }   
-    }
+        }
+        .main-buttons{
+            justify-content: center;
+            button{
+                color: $lavenderBlush;
+                margin-top: 5px;
+                background-color: $russianGreen;
+                padding: 10px 22px;
+                border-radius: 5px;
+                }
+            }  
+        }
+    .paragraphs{
+        margin-top: 10px;
+        position: relative;
+        width: 308px;
+        p{
+            color: $deepSpaceSparkle;
+            font-size: 30px;
+            background-color: $lavenderBlush;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    }   
 }
