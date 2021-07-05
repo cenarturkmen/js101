@@ -37,13 +37,15 @@ clearFinished.addEventListener("click", function(){
     }
 });
 
+
 clearAll.addEventListener("click", function(){
     let allParagraphs = document.querySelectorAll("p");
-    
+
     for(i=0; i<allParagraphs.length; i++){
         allParagraphs[i].innerHTML = "";
     }
 });
+
 
 input.addEventListener("keyup", function(e){
 
