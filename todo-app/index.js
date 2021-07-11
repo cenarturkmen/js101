@@ -50,17 +50,13 @@ input.addEventListener("keyup", function(e){
 
 //local storage reverter
 localStorageButton.addEventListener("click", function(e){
-    
-    for(let i=0; i<localStorage.length; i++){
-        const todo = localStorage.key(i);
-        if (localStorage.getItem(todo) == "notDone"){
-            addParagraph(todo);
-        }
-        else{
-            addParagraph(todo, 2);
-        }
-    }
+    getLocalData();
 })
+
+// when page loaded  call getLocalData
+window.onload = function(){
+    getLocalData();
+}
 
 // addButton and localStorageButton use this. 
 function addParagraph(todoLS, notDone){
@@ -94,4 +90,18 @@ function addParagraph(todoLS, notDone){
             console.log(paragraph.innerText, localStorage.getItem(paragraph.innerText));
         }
     })
+}
+
+// get local storage data
+function getLocalData(){
+    for(let i=0; i<localStorage.length; i++){
+        const todo = localStorage.key(i);
+
+        if (localStorage.getItem(todo) == "notDone"){
+            addParagraph(todo);
+        }
+        else{
+            addParagraph(todo, 2);
+        }
+    }
 }
