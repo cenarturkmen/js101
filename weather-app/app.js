@@ -1,4 +1,5 @@
 const myKey = "af276126cd0606dd46a2ff2cad4284f6"; //ye i know this is my key
+Weather.setApiKey(myKey);
 
 const button = document.querySelector(".button");
 const iconData = {
@@ -41,8 +42,6 @@ const iconData = {
         "ragged shower rain":"umbrella"
 }
 
-Weather.setApiKey(myKey);
-
 function getData(city, domTemp, domCond, domIcon){
     Weather.getCurrent( city, function( current ) {
         temperature = Math.round( Weather.kelvinToCelsius( current.temperature()));
@@ -52,11 +51,10 @@ function getData(city, domTemp, domCond, domIcon){
         const conditionDom = document.querySelector(domCond);
         const icon = document.querySelector(domIcon);
 
-        temperatureDom.textContent = "Tempature is " + temperature + "°";
+        temperatureDom.textContent = "Tempature is " + temperature + " celcius";
         conditionDom.textContent = "Weather is " + condition + "";
         icon.innerHTML = iconData[condition];
     } );
-
 }
 
 getData("Istanbul",".istanbulTemp",".istanbulCond",".left-left .material-icons");
@@ -66,10 +64,10 @@ button.addEventListener("click",function(e){
     const bot = document.querySelector(".bot");
     const cityName = document.querySelector(".cityX");
     const input = document.querySelector(".input")
+
     if (input.value){
         cityName.innerHTML = input.value;
         bot.style.display = "flex";
         getData(input.value,".tempX", ".condX","#iconX");
     }
 });
-
