@@ -1,0 +1,115 @@
+$backgroundColor:  #e60050;
+*{
+    text-align:center;
+    font-family: 'Khula', sans-serif;
+    color: #e0e5eb;
+}
+body{
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+    .head{
+        width: 48%;
+        border-radius: 10px;
+        background: $backgroundColor;
+        box-shadow: inset -12px -12px 24px #cf0048, inset 12px 12px 24px #fd0058;
+        align-self: center;
+        margin-bottom: 20px;
+    }    
+    .main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 30px;
+        .left{
+            margin-right: 1%;
+            border-radius: 10px;
+            width:22%;
+            background: $backgroundColor;
+            box-shadow:  10px 10px 20px #9f0037, -10px -10px 20px #ff0069;
+            .left-left{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .material-icons{
+                    margin-top: 20px;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .right{
+            margin-left: 1%;
+            border-radius: 10px;
+            width:22%;
+            background: $backgroundColor;
+            box-shadow:  10px 10px 20px #9f0037, -10px -10px 20px #ff0069;
+            .right-right{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .material-icons{
+                    margin-top: 20px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    .input-side{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .input{
+            margin-right: 10px;
+            height: 40px;
+            width: 37%;
+            border:0px;
+            color:#fff;
+            border-radius: 10px;
+            background: $backgroundColor;
+            box-shadow: inset -12px -12px 24px #cf0048,
+                        inset 12px 12px 24px #fd0058;
+        &:active{
+            box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5), -4px -4px 6px 0 rgba(116, 125, 136, .5), inset -4px -4px 6px 0 rgba(255,255,255,.2), inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+        }
+        }
+        .button{
+                width: 10%;
+                height: 40px;
+                color: #fff;
+                border-radius: 5px;
+                border:0px;
+                padding: 10px 25px;
+                font-family: 'Lato', sans-serif;
+                font-weight: 500;
+                background: transparent;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                display: inline-block;
+                box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
+                &:hover {
+                    box-shadow:  10px 10px 20px #9f0037, -10px -10px 20px #ff0069, inset -12px -12px 24px #cf0048, inset 12px 12px 24px #fd0058;
+                &:active{
+                    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5), -4px -4px 6px 0 rgba(116, 125, 136, .5),  inset -4px -4px 6px 0 rgba(255,255,255,.2), inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+                }
+                }
+            }
+        }
+    .boS{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .bot{
+            margin-top: 20px;
+            display: none;
+            flex-direction: column;
+            margin-right: 1%;
+            border-radius: 10px;
+            width:47%;
+            background: $backgroundColor;
+            box-shadow:  10px 10px 20px #9f0037,
+                        -10px -10px 20px #ff0069;
+        }
+    }
+}
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+<div class="head">
+    <h1>Weather App</h1>
+</div>
+<div class="main">
+    <div class="left">
+        <div class="left-left">
+            <h2>Istanbul</h2>
+            <span class="material-icons">
+                light_mode
+            </span>
+        </div>
+        <p class="istanbulTemp"></p>
+        <p class="istanbulCond"></p>      
+    </div>
+    <div class="right">
+        <div class="right-right">
+            <h2>Tokyo</h2>
+            <span class="material-icons">
+                light_mode
+            </span>
+        </div>
+        <p class="tokyoTemp"></p>
+        <p class="tokyoCond"></p>
+    </div>
+</div>
+<div class="input-side">
+    <input class="input" placeholder="City"> <button class="button">search</button>
+</div>
+<div class="boS">
+    <div class="bot">  
+        <h2 class="cityX">HEY</h2>
+        <span id="cityName" class="material-icons">
+            umbrella
+        </span>
+        <p class="tempX"></p>
+        <p class="condX"></p>
+    </div>   
+</div>  
+</body>
+<script src="../node_modules/weather.js/dist/weather.min.js"></script>
+<script src="app.js"></script>
+<script type="text/javascript" src="../data.json"></script>
+</html>
+
