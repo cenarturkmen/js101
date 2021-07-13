@@ -1,4 +1,4 @@
-const myKey = "af276126cd0606dd46a2ff2cad4284f6";
+const myKey = "af276126cd0606dd46a2ff2cad4284f6"; //ye i know this is my key
 
 const button = document.querySelector(".button");
 const iconData = {
