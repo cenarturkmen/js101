@@ -44,6 +44,17 @@ describe("user class", () => {
             })
             .catch(done);
     });
+    it("should return en error if the user cannot view repos", (done) =>{
+        const getStub = sandbox.stub(axios, "get");
+        sandbox.stub(user,"canViewRepos").value(false);
+
+        user.getUserRepo(2)
+        .catch(error=> {
+            expect(error).to.be.eq("cannot view repo");
+            expect(getStub).to.not.have.been.called;
+            done();
+        });
+    })
 
     it("should return one of my followers on github",(done) => {
         const getStub = sandbox.stub(axios, "get").resolves({data: ["1","2","3"]});
