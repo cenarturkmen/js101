@@ -54,6 +54,48 @@ class linkedList{
        prev.next = temp.next;
        temp = null;
     }
+    // length of linked list
+    lengthLL(){
+        let counter = 0
+        let temp = this.head;
+        while(temp != null){
+            counter++;
+            temp = temp.next;
+        }
+        return counter;
+    }
+    // return index of the given value 
+    search(searchData){
+        let idx = 0;
+        let temp = this.head;
+        if(temp != null){
+            while(temp.next != null){
+                if(temp.data == searchData){
+                    return idx;
+                }
+                else{
+                    temp = temp.next;
+                    idx++;
+                }
+            }
+        }
+    
+    }
+/*
+    // reverse of linkedlist 
+    reverse(){
+        let prev = null;
+        let current = this.head;
+        let next1 = null;
+        while(current != null){
+            next1 = current.next;
+            current.next = prev;
+            prev = current;
+        }
+        this.head = prev;
+        return this.printLL();
+    }
+*/  
 
     // utility function* print ll
     printLL(){
@@ -74,3 +116,8 @@ myLinkedList.push(26);
 myLinkedList.append(1);
 myLinkedList.deleteNode(24);
 myLinkedList.printLL();
+//console.log(myLinkedList.lengthLL());
+//console.log(myLinkedList.search(23));
+//console.log("reverse");
+myLinkedList.reverse();
+console.log("end.")
