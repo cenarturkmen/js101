@@ -3,16 +3,20 @@ i will solve this collision problem as soon as possible.
 */
 
 class hashTable {
-    table = new Array(44);
+    table = new Array(2);
     sizeCounter = 0; // if array is full dont add any item
     loadfactor = this.sizeCounter / this.table.length; // for later work for size fix
 
     hashStringToInt(key){
-        let hash = 17;
-        //for (let i = 0; i<key.length; i++){
-        hash = (13 * hash * key.charCodeAt()) % this.table.length;
-        //}
-        return hash;
+        let hashValue = 0;
+        const stringKey = key.toString();
+      
+        for (let index = 0; index < stringKey.length; index++) {
+          const charCode = stringKey.charCodeAt(index);
+          hashValue += charCode;
+        }
+      
+        return hashValue;
     };
 
     setItem(key, value){
@@ -42,13 +46,8 @@ const myHashmap = new hashTable;
 myHashmap.setItem("first", "aynen");
 myHashmap.setItem("second", "oyle");
 myHashmap.setItem("third", "kolay gelsin");
-console.log(myHashmap.getItem("first"));
-console.log(myHashmap.getItem("second"));
-console.log(myHashmap.getItem("third"));
-
-// must be return "this key already taken"
-myHashmap.setItem("first", "evet");
-// must be return "aynen"
-console.log(myHashmap.getItem("first"));
+console.log("first:", myHashmap.getItem("first"));
+console.log("second:", myHashmap.getItem("second"));
+console.log("third:",myHashmap.getItem("third"));
 
 console.log(myHashmap.table);
