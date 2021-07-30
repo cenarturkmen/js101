@@ -1,7 +1,3 @@
-/* note: this implementation has a so many collision,
-i will solve this collision problem as soon as possible.
-*/
-
 class hashTable {
     table = new Array(2);
     sizeCounter = 0; // if array is full dont add any item
