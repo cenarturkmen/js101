@@ -1,4 +1,4 @@
-// 
+
 class Node{
     constructor(data){
         this.data = data;
@@ -81,21 +81,20 @@ class linkedList{
         }
     
     }
-/*
     // reverse of linkedlist 
     reverse(){
         let prev = null;
         let current = this.head;
-        let next1 = null;
+        let next = null;
         while(current != null){
-            next1 = current.next;
+            next = current.next;
             current.next = prev;
             prev = current;
+            current = next;
         }
         this.head = prev;
         return this.printLL();
-    }
-*/  
+    }  
 
     // utility function* print ll
     printLL(){
