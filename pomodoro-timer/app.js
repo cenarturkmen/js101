@@ -17,7 +17,7 @@ startButton.addEventListener("click", function(){
                 minute = 30;
             }
         }
-    },500);
+    },1500);
 });
 
 pauseButton.addEventListener("click", function(){
@@ -27,7 +27,7 @@ pauseButton.addEventListener("click", function(){
 
 endButton.addEventListener("click", function(){
     clearTimeout(clock);
-    second= 60;
-    minute = 29;
+    second= 01;
+    minute = 30;
     document.querySelector("#timer").innerHTML = minute + " : " + second;
 })
