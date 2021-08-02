@@ -1,36 +1,42 @@
+$font-color: #1471fb;
+$button-hover-color: #062f6b;
+
 body{
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, #1471fb, #2757dc, #2d3ebd, #2d259e, #290480);
 }
 .page{
     display: flex;
     justify-content:center;
     flex-direction: column;
     h1{
-        color:white;
+        color:$font-color;
         justify-content: center;
     }
     h2{
         display: flex;
-        color:white;
+        color:$font-color;
         justify-content: center;
     }
     .buttons{
         display: flex;
         justify-content: space-between;
+        margin-top: 10px;
         &>button{
             justify-content: center;
             width: 50px;
             height: 40px;
-            border-radius: 50px;
+            border-radius: 40px;
             background: linear-gradient(to bottom, #1266e2, #1579ff);
-            box-shadow:  20px 20px 60px #1160d5,
-                        -20px -20px 60px #1782ff;
+            box-shadow:  10px 10px 50px #1160d5,
+                        -5px -5px 50px #1782ff;
             border:0;
             color:white;
+            &:hover{
+                background: $button-hover-color;
+            }
         }
     }
 }
