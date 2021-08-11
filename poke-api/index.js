@@ -14,9 +14,9 @@ async function getapi(url) {
 
 function createLi(name){
     responseUl = document.getElementById("responseUl");
-    let li = document.createElement("li");
-    li.innerText = name;
-    responseUl.appendChild(li);
+    let h2 = document.createElement("h2");
+    h2.innerText = name;
+    responseUl.appendChild(h2);
 }
 function createImg(url){
     responseUl = document.getElementById("responseUl");
